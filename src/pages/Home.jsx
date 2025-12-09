@@ -1,5 +1,5 @@
 import { ThemeToggle } from "../components/ThemeToggle";
-import { ExitBtn } from "../components/ExitBtn";
+import { PopUp } from "../components/PopUp";
 
 export const Home = () => {
 
@@ -8,7 +8,7 @@ export const Home = () => {
             {/* Theme toggle */}
             <ThemeToggle />
             <h1>Hi! I'm Ava</h1>
-            <ExitBtn />
+            <PopUp />
             {/* Background effects */}
             {/* Navbar */}
 
