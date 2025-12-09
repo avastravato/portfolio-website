@@ -1,15 +1,21 @@
+import { ThemeToggle } from "../components/ThemeToggle";
+import { ExitBtn } from "../components/ExitBtn";
+
 export const Home = () => {
-    <div className="min-h-screen ">
-        
-        {/* Theme toggle */}
 
-        {/* Background effects */}
+    return (
+        <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+            {/* Theme toggle */}
+            <ThemeToggle />
+            <h1>Hi! I'm Ava</h1>
+            <ExitBtn />
+            {/* Background effects */}
+            {/* Navbar */}
 
-        {/* Navbar */}
+            {/* Main content */}
 
-        {/* Main content */}
+            {/* Footer */}
 
-        {/* Footer */}
-
-    </div>;
+        </div>
+    );
 };
