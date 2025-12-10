@@ -1,19 +1,18 @@
 import { ThemeToggle } from "../components/ThemeToggle";
 import { PopUp } from "../components/PopUp";
+import { MainPage } from "../components/MainPage";
 
 export const Home = () => {
 
     return (
-        <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <div className="min-h-screen flex items-center justify-center bg-background text-foreground overflow-x-hidden">
             {/* Theme toggle */}
             <ThemeToggle />
-            <h1>Hi! I'm Ava</h1>
             <PopUp />
             {/* Background effects */}
-            {/* Navbar */}
 
             {/* Main content */}
-
+            <MainPage />
             {/* Footer */}
 
         </div>
