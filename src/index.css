@@ -9,6 +9,7 @@
   --color-primary-foreground: var(--primary-foreground);
 
   --color-card: var(--card);
+  --color-card-header: var(--card-header);
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
@@ -48,10 +49,11 @@
 
 @layer base {
   :root {
-    --background: #f8fafc;
-    --foreground: #0b0f1c;
+    --background: #f8fafc; /* white background */
+    --foreground: #4c4c4c;
 
-    --card: #ffffff;
+    --card: #f8fafc;
+    --card-header: #333333;
 
     --primary: #7c4dff;
     --primary-foreground: #f8fafc;
@@ -60,13 +62,14 @@
   }
 
   .dark {
-    --background: #020617;
-    --foreground: #e2e8f0;
+    --background: #000000; /* black background */
+    --foreground: #f8fafc;
 
-    --card: #0f172a;
+    --card: #002147;
+    --card-header: #000000;
 
     --primary: #8e66ff;
-    --primary-foreground: #e2e8f0;
+    --primary-foreground: #f8fafc;
 
     --border: #1e293b;
   }
