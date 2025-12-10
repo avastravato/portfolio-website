@@ -1,5 +1,5 @@
 import { ThemeToggle } from "../components/ThemeToggle";
-import { MainPage } from "../components/MainPage";
+import { MainFrame } from "../components/MainPage";
 
 export const Home = () => {
 
@@ -11,7 +11,7 @@ export const Home = () => {
             {/* Background effects */}
 
             {/* Main content */}
-            <MainPage />
+            <MainFrame />
             
             {/* Footer */}
 
