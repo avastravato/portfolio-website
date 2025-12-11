@@ -1,6 +1,6 @@
 import { Smile, Folders, Hammer, FileText, Palette, MailOpen } from 'lucide-react';
 
-export const MainFrame = () => {
+export const MainPage = () => {
     return (
         <div className='w-[50vw] aspect-[3/2] bg-card rounded-xl outline-4 outline-border'>
             <div className='w-full h-20 bg-card-header rounded-t-xl flex items-center p-4 outline-4 outline-border'>

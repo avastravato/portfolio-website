@@ -2,9 +2,7 @@ import { useState } from "react";
 import { useDraggable } from "@dnd-kit/core";
 import { X } from 'lucide-react';
 
-export function DraggableWindow({ id, onClose, title, children }) {
-  // Store position
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+export function DraggableWindow({ id, position, onClose, title, children }) {
 
   const { attributes, listeners, setNodeRef, setActivatorNodeRef, transform } =
     useDraggable({ id });
@@ -18,15 +16,6 @@ export function DraggableWindow({ id, onClose, title, children }) {
       : `translate3d(${position.x}px, ${position.y}px, 0)`,
   };
 
-  // Update position on drag end
-  const handleDragEnd = () => {
-    if (transform) {
-      setPosition((prev) => ({
-        x: prev.x + transform.x,
-        y: prev.y + transform.y,
-      }));
-    }
-  };
 
   return (
     <div ref={setNodeRef} style={style}>
@@ -35,8 +24,6 @@ export function DraggableWindow({ id, onClose, title, children }) {
         ref={setActivatorNodeRef}
         {...listeners}
         {...attributes}
-        onMouseUp={handleDragEnd} // Save final position on release
-        onTouchEnd={handleDragEnd}
         style={{
           background: "#4f46e5",
           color: "#fff",

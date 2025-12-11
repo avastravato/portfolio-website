@@ -1,5 +1,6 @@
 import { ThemeToggle } from "../components/ThemeToggle";
-import { MainFrame } from "../components/MainPage";
+import { MainPage } from "../components/MainPage";
+import { Drag } from '../components/Drag';
 
 export const Home = () => {
 
@@ -11,8 +12,8 @@ export const Home = () => {
             {/* Background effects */}
 
             {/* Main content */}
-            <MainFrame />
-            
+            <MainPage />
+            <Drag />
             {/* Footer */}
 
         </div>
