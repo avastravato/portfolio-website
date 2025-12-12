@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDraggable } from "@dnd-kit/core";
 import { X } from 'lucide-react';
 
-export function DraggableWindow({ id, position, onClose, title, children }) {
+export const DraggableWindow = ({ id, position, onClose, title, children }) => {
 
   const { attributes, listeners, setNodeRef, setActivatorNodeRef, transform } =
     useDraggable({ id });
@@ -16,53 +16,21 @@ export function DraggableWindow({ id, position, onClose, title, children }) {
       : `translate3d(${position.x}px, ${position.y}px, 0)`,
   };
 
-
   return (
     <div ref={setNodeRef} style={style}>
-      {/* Header / Drag handle */}
-      <div
+      <div className="bg-card-header text-background flex justify-between rounded-t-xl border-t-4 border-l-4 border-r-4 border-border p-4 cursor-move"
         ref={setActivatorNodeRef}
         {...listeners}
         {...attributes}
-        style={{
-          background: "#4f46e5",
-          color: "#fff",
-          padding: "8px 12px",
-          cursor: "move",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          borderTopLeftRadius: "8px",
-          borderTopRightRadius: "8px",
-        }}
       >
-        <span>{title}</span>
-        <button
+        <span className="text-white">{title}</span>
+        <button className="cursor-pointer"
           onClick={onClose}
-          style={{
-            background: "transparent",
-            border: "none",
-            color: "#fff",
-            fontWeight: "bold",
-            cursor: "pointer",
-            fontSize: "16px",
-          }}
         >
           <X />
         </button>
       </div>
-
-      {/* Content */}
-      <div
-        style={{
-          background: "#fff",
-          padding: "12px",
-          border: "1px solid #ccc",
-          borderBottomLeftRadius: "8px",
-          borderBottomRightRadius: "8px",
-          minWidth: "200px",
-        }}
-      >
+      <div className="bg-card p-12 rounded-b-xl border-4 border-border">
         {children}
       </div>
     </div>
