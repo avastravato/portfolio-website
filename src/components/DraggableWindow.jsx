@@ -22,7 +22,7 @@ export const DraggableWindow = ({ id, position, onClose, title, children }) => {
         {...listeners}
         {...attributes}
       >
-        <span className="text-white">{title}</span>
+        <span className="text-primary-foreground">{title}</span>
         <button className="cursor-pointer"
           onClick={onClose}
         >
