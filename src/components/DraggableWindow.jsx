@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDraggable } from "@dnd-kit/core";
 import { X } from 'lucide-react';
 
