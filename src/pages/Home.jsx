@@ -13,7 +13,6 @@ export const Home = () => {
 
             {/* Main content */}
             <MainPage />
-            <Drag />
             {/* Footer */}
 
         </div>
